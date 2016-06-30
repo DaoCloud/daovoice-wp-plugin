@@ -14,3 +14,11 @@ With the DaoVoice plugin for wordpress, you can chat to users .
  * add admin  daovoice setting ui.
  * add support for login users.
  * . . . 
+
+
+
+## usage
+
+Please configure environment :
+
+ `DAOVOICE_APP_ID = you_daovoice_app_id`
