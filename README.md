@@ -5,6 +5,9 @@ DaoVoice plugin for wordpress .
 
 With the DaoVoice plugin for wordpress, you can chat to users .
 
+![daovoice wordpress screen shoot]
+(https://github.com/DaoCloud/daovoice-wp-plugin/blob/master/screenshots/widget.png)
+
 
 ## todo list
  
