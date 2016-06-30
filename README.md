@@ -21,4 +21,5 @@ With the DaoVoice plugin for wordpress, you can chat to users .
 
 Please configure environment :
 
- `DAOVOICE_APP_ID = you_daovoice_app_id`
+ `DAOVOICE_APP_ID = you_daovoice_app_id` 
+ You can use `0366f0c8` for test .
