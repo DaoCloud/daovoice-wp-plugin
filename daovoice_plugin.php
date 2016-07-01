@@ -8,7 +8,7 @@ Author URI: http://www.daocloud.io/cloud/voice.html
 Version: 0.1
  */
 function daovoice_js(){
-	$wp_user = wp_get_current_user()
+	$wp_user = wp_get_current_user();
 	$app_id = getenv("DAOVOICE_APP_ID");
 
 	if(empty($app_id)){
