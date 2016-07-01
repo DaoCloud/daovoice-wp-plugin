@@ -1,13 +1,11 @@
 wordpress:
-  image: daocloud.io/daocloud/dao-wordpress:latest
+  image: daocloud.io/daocloud/wordpress-with-daovoice:latest
   links:
     - db:mysql
   ports:
     - 9000:80
   environment:
     - DAOVOICE_APP_ID=91af7bf3
-  volumes:
-    - /root/daovoice-wp-plugin:/var/www/html/wp-content/plugins
   restart: always
 db:
   image: daocloud.io/mysql:5.6
