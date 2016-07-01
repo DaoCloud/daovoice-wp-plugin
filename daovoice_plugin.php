@@ -15,25 +15,27 @@ function daovoice_js(){
 		return '';
 	}
 
-	$daovoiceSettingJson = [
+	$daovoiceSetting = [
 		"app_id" => $app_id
 	];
 
 	if(!empty($wp_user)) {
 		if (!empty($wp_user->user_email))
 		{
-		  $daovoiceSettingJson["email"] = $wp_user->user_email;
+		  $daovoiceSetting["email"] = $wp_user->user_email;
 		}
 		if (!empty($wp_user->display_name))
 		{
-		  $daovoiceSettingJson["name"] = $wp_user->display_name;
+		  $daovoiceSetting["name"] = $wp_user->display_name;
 		}
 	}
+
+	$daovoiceSettingJson = json_encode($daovoiceSetting);
 
 	$str = <<<HTML
 <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//widget.daovoice.io/widget/{$app_id}.js","daovoice");</script>
 <script>
-  daovoice('init', json_encode($daovoiceSettingJson));
+  daovoice('init', $daovoiceSettingJson);
   daovoice('update');
 </script>
 HTML;
