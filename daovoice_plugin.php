@@ -22,11 +22,11 @@ function daovoice_js(){
 	if(!empty($wp_user)) {
 		if (!empty($wp_user->user_email))
 		{
-		  $daovoiceSettingJson["email"] = WordPressEscaper::escJS($wp_user->user_email);
+		  $daovoiceSettingJson["email"] = $wp_user->user_email;
 		}
 		if (!empty($wp_user->display_name))
 		{
-		  $daovoiceSettingJson["name"] = WordPressEscaper::escJS($wp_user->display_name);
+		  $daovoiceSettingJson["name"] = $wp_user->display_name;
 		}
 	}
 
