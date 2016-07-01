@@ -33,7 +33,7 @@ function daovoice_js(){
 	$str = <<<HTML
 <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//widget.daovoice.io/widget/{$app_id}.js","daovoice");</script>
 <script>
-  daovoice('init', $daovoiceSettingJson);
+  daovoice('init', json_encode($daovoiceSettingJson));
   daovoice('update');
 </script>
 HTML;
