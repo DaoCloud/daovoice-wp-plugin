@@ -71,12 +71,11 @@ function daovoice_js(){
 	$user_id = $wp_user->user_login;
 
 	$daovoiceSetting = [
-		"app_id" => $app_id,
-		"user_id" => $user_id
+		"app_id" => $app_id
 	];
 
 	if ( get_option('is_ensure_user_id') ){
-
+		$daovoiceSetting['user_id'] = $user_id;
 		$daovoiceSetting['secure_digest'] = hash_hmac("sha1", $user_id, get_option('app_secert'));
 	}
 
