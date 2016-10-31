@@ -10,7 +10,7 @@ Version: 0.2
 
 
 function daovoice_setting_menu() {
-	add_menu_page('DaoVoice Settings', 'DaoVoice', 'administrator', __FILE__, 'daovoice_settings_page' , plugins_url('/images/icon.png', __FILE__) );
+	add_menu_page('DaoVoice Settings', 'DaoVoice', 'administrator', __FILE__, 'daovoice_settings_page' , plugins_url('/images/icon.svg', __FILE__) );
 	add_action( 'admin_init', 'register_daovoice_plugin_settings' );
 }
 
