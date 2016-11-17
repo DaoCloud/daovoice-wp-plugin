@@ -5,7 +5,7 @@ Plugin URI: https://wordpress.org/plugins/daovoice
 Description: Official <a href="http://www.daocloud.io/cloud/voice.html">DaoVoice</a> support for WordPress.
 Author: Wenter
 Author URI: http://www.daocloud.io/cloud/voice.html
-Version: 1.0
+Version: 0.2
  */
 wp_enqueue_style("daovoice_fontawesome", '//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css');
 
