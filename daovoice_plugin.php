@@ -85,9 +85,11 @@ function daovoice_js(){
 		"app_id" => $app_id
 	];
 
-	if ( get_option('is_ensure_user_id') ){
-		$daovoiceSetting['user_id'] = $user_id;
-		$daovoiceSetting['secure_digest'] = hash_hmac("sha1", $user_id, get_option('app_secert'));
+	if ( get_option('is_ensure_user_id')){
+        if ($user_id) {
+            $daovoiceSetting['user_id'] = $user_id;
+            $daovoiceSetting['secure_digest'] = hash_hmac("sha1", $user_id, get_option('app_secert'));
+        }
 	}
 
 	if(!empty($wp_user)) {
